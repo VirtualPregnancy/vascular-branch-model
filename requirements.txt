@@ -1,0 +1,6 @@
+numpy
+simpleitk
+scikit-image
+skan
+https://github.com/VirtualPregnancy/placentagen
+
