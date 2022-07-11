@@ -80,8 +80,10 @@ if __name__ == '__main__':
 
         print("Fixing branch direction to allow more intelligent trimming")
         elems,branch_id,branch_start,branch_end,cycles,seen = pg.fix_elem_direction(inlet[1:4],elems,nodes)
+        print('fix direction',len(elems),inlet)
         print("Removing disconnected elements after branch analysis")
         elems, euclid_radii,branch_id = pg.remove_disconnected(elems, euclid_radii, branch_id, seen)
+        print('lll',len(elems))
         if cycles.any():
             print("Cutting loops")
             elems, euclid_radii = pg.cut_loops(elems,nodes,branch_id,branch_start,branch_end,cycles,euclid_radii) 
