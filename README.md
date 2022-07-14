@@ -12,7 +12,8 @@ Python requirements are listed in requirements.txt, please note that this code d
 
 Next run *branch_analysis.py* which creates spreadsheets in the data/sample-branch directory and allows you to see statistics about the nature of vascular branching.
 
-To come.... conversion to a computational model
+*skeleton2model.py* converts a graphical skeleton to a form that can be used in modelling
 
+*solvemodel.py* solves a simplified computational model (with no tree growing or capillary networks) that applies fixed blood pressure drop across your skeleton and looks at the distribution of flow within the tree
 
 
