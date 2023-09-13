@@ -1,5 +1,5 @@
 ---------------------------------
-BASIC VASCULAR BRANCHING ANALYSIS
+VASCULAR BRANCHING ANALYSIS
 ---------------------------------
 
 This example takes a segmentation of a vascular branching network (a 3D binary image stack) and demonstrates how to convert this segmentation into a branching network of nodes and elements, and how to analyse structure and function in that network.
@@ -16,4 +16,11 @@ Next run *branch_analysis.py* which creates spreadsheets in the data/sample-bran
 
 *solvemodel.py* solves a simplified computational model (with no tree growing or capillary networks) that applies fixed blood pressure drop across your skeleton and looks at the distribution of flow within the tree
 
+
+Requirements (can all be installed via pip):
+numpy
+simpleitk
+scikit-image
+skan
+https://github.com/VirtualPregnancy/placentagen
 

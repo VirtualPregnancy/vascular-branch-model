@@ -9,8 +9,8 @@ if __name__ == '__main__':
     
     path = 'data/'
     identifiers = ['F8']
-    write_skeleton=False #Can set to True if looking to see skeletonised image 
-    write_distanceimg=False #This is used to create vessel radii and can set to True if you want to see this
+    write_skeleton=True #Can set to True if looking to see skeletonised image 
+    write_distanceimg=True #This is used to create vessel radii and can set to True if you want to see this
     pixel_resolution_um = 6.499919 #set up for isotropic pixel size, here in um. "Scaling dimensions to mm" is the only place this is used, and so could be non-isotrophic
     pixel_resolution_mm = pixel_resolution_um/1000. #models typically use mm units
     ############
@@ -97,7 +97,7 @@ if __name__ == '__main__':
             euclid_radii_new[ne] = euclid_radii[elem_map[ne]]
             
         print("Removing sub-resolution branches (small radii)")
-        elems,euclid_radii =pg.remove_small_radius(elems,euclid_radii_new,branch_id,branch_start,1.5) #Deleting elements with radius less than 2.5 pixel
+        elems,euclid_radii =pg.remove_small_radius(elems,euclid_radii_new,branch_id,branch_start,1.5) #Deleting elements with radius less than 1.5 pixel
         print("Recalculating element branching")
         elems,branch_id,branch_start,branch_end,cycles,seen = pg.fix_elem_direction(inlet[1:4],elems,nodes)
         print("Removing disconnected elements after branch analysis")
